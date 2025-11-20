@@ -39,7 +39,8 @@ This project simulates a realistic **Internal Network Breach** scenario within a
 I designed a segmented Azure Virtual Network to simulate a corporate environment with distinct zones for Servers and Clients.
 
 ### 1. Network Topology
-[--INSERT NETWORK CONFIGURATION PICTURE--]
+<img width="1161" height="821" alt="network_config2" src="https://github.com/user-attachments/assets/868038a3-e70b-4dc5-8864-67222050cd16" />
+
 *Figure 1: High-level architecture showing the isolation between the Domain Controller and the Attacker Machine.*
 
 ### 2. Cloud Resources (Azure)
@@ -143,23 +144,6 @@ To prevent future Kerberoasting attacks from easily requesting RC4 tickets, I mo
 <img width="977" height="698" alt="encryption_config2" src="https://github.com/user-attachments/assets/b0be851c-85ce-4252-b2fb-3a4795cc6c5a" />
 
 *Figure 13: Configuring Group Policy to deprecate RC4 and enforce AES encryption.*
-
----
-
-<details>
-<summary>🧠 Click to see the KQL Detection Query</summary>
-
-```kusto
-SecurityEvent
-| where EventID == 4769
-| where EventData contains "0x17"
-| parse EventData with * 'TargetUserName">' TargetUserName '<' *
-| parse EventData with * 'ServiceName">' ServiceName '<' *
-| parse EventData with * 'IpAddress">' IpAddress '<' *
-| parse EventData with * 'TicketEncryptionType">' TicketEncryptionType '<' *
-| project TimeGenerated, TargetUserName, ServiceName, TicketEncryptionType, IpAddress
-```
-</details>
 
 ---
 
