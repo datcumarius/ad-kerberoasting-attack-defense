@@ -101,19 +101,21 @@ Upon detecting the attack pattern, I initiated a full Incident Response cycle to
 ### 10. Containment: Isolating the Compromised User
 Since the attacker utilized `bob.john`'s account for initial access/reconnaissance, I immediately disabled the account to prevent lateral movement.
 
-🔴 [INSERT] 🔴
+<img width="931" height="452" alt="account_disabled" src="https://github.com/user-attachments/assets/1eab5f8a-0acf-4730-8306-14c13e7ab66a" />
+
 *Figure 10: Disabling the compromised user account in Active Directory.*
 
 ### 11. Remediation: Securing the Service Account
 I reset the password for the targeted `sql-service` account, rendering the stolen hash useless.
 
-🔴 [INSERT] 🔴
+<img width="437" height="220" alt="password_changed" src="https://github.com/user-attachments/assets/e41df3fb-84f3-4361-93e6-b4a0531036fb" />
+
 *Figure 11: Resetting the service account password.*
 
 ### 12. Hardening: Disabling Weak Encryption (AES Enforcement)
 To prevent future Kerberoasting attacks from easily requesting RC4 tickets, I modified the **Default Domain Policy (GPO)**. I explicitly disabled RC4 encryption for Kerberos and enforced AES-128/AES-256, significantly increasing the difficulty of cracking any future tickets.
 
-🔴 [INSERT] 🔴
+<img width="977" height="698" alt="encryption_config2" src="https://github.com/user-attachments/assets/d0d0d329-0877-4005-b161-166b16fa289b" />
 *Figure 12: Configuring Group Policy to deprecate RC4 and enforce AES encryption.*
 
 ---
