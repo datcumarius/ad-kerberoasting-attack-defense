@@ -1,7 +1,7 @@
 # 🛡️ Active Directory LAB: Kerberoasting Attack & Defense
 
 <p align="left">
-    Exploiting Active Directory via Kerberoasting, detecting threats with Microsoft Sentinel, and implementing Hardening measures.
+    Exploiting Active Directory via Kerberoasting, detecting threats with Microsoft Sentinel, and implementing Hardening measures. Blue Team + Red Team Lab
     <br />
   </p>
 <div align="center">
