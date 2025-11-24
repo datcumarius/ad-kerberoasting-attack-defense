@@ -1,7 +1,9 @@
 # 🛡️ Active Directory LAB: Kerberoasting Attack & Defense
 
 <p align="left">
-    Exploiting Active Directory via Kerberoasting, detecting threats with Microsoft Sentinel, and implementing Hardening measures. Blue Team + Red Team Lab
+    Exploiting Active Directory via Kerberoasting, detecting threats with Microsoft Sentinel, and implementing Hardening measures.
+    <br />
+    <strong>Blue Team + Red Team Lab</strong>
     <br />
   </p>
 <div align="center">
@@ -31,6 +33,13 @@ This project simulates a realistic **Internal Network Breach** scenario within a
 2.  **Attack (Red Team):** Exploiting Service Principal Names (SPNs) to extract and crack service account credentials.
 3.  **Detect (Blue Team):** Engineering KQL queries in Sentinel to identify specific Kerberos encryption anomalies (RC4).
 4.  **Respond (Blue Team):** Containing the compromised user and hardening the Kerberos policy (AES Enforcement).
+
+---
+
+### 📄 Incident Response Report
+For a detailed breakdown of the investigation, forensic analysis, and remediation steps from a SOC perspective, please view the **official report**:
+
+📖 **[Read the Professional IR Report (PDF)](./IR_Report_Kerberoasting_2025.pdf)**
 
 ---
 
